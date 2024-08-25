@@ -1,0 +1,143 @@
+﻿body {
+    cursor: default;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* padding: 80px 200px; */
+    display: flex;
+}
+
+.detailProductBlock {
+    margin: 150px auto auto;
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    column-gap: 20px;
+    /* border: 1px solid green; */
+}
+
+.imageBlock {
+    /* width: 0%; */
+    /* border: 1px solid green; */
+}
+
+    .imageBlock img {
+        width: 100%;
+        object-fit: contain;
+        position: relative;
+        top: -50px;
+    }
+
+.contentBlock {
+    /* margin: auto 0; */
+    position: relative;
+    /* top: 100px; */
+    /* top: -205px; */
+    /* border: 1px solid green; */
+}
+
+.nameProduct {
+    font-size: 2rem;
+    height: 40px;
+}
+
+.priceProduct {
+    font-size: 2rem;
+}
+
+.sizeProduct {
+    display: flex;
+    margin: 20px 0;
+}
+
+.sizeBox {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--primary-color);
+    display: block;
+    text-align: center;
+    min-width: 35px;
+    border-radius: 5px;
+}
+
+.size {
+    display: none;
+}
+
+.size:checked ~ .sizeBox {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #333;
+    padding: 9px;
+}
+
+    .sizeBox span {
+        min-width: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .sizeBox:hover {
+        background-color: transparent;
+        color: #666;
+        border: 1px solid #333;
+        padding: 9px;
+    }
+
+/* Quantity */
+.quantityProduct {
+    display: flex;
+    /* font-size: 2rem; */
+    line-height: 30px;
+}
+
+.currentNumber {
+    background-color: #fff;
+    border-radius: 3px;
+    min-width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.quantityProduct__more, .quantityProduct__less {
+    font-size: 1.6rem;
+    margin: 0 5px;
+}
+
+.addCart {
+    margin-top: 20px;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+    .addCart span {
+        display: block;
+        font-size: 1.4rem;
+        width: 120px;
+        background-color: var(--primary-color);
+        border-radius: 3px;
+        /* color: var(--white-color); */
+    }
+
+        .addCart a:hover {
+            background-color: var(--button-hover-color);
+            color: var(--white-color);
+            cursor: pointer;
+        }
+
+.detail {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .detailProductBlock {
+        grid-template-columns: 350px;
+    }
+}
